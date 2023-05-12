@@ -678,7 +678,7 @@ footer span {
 
 
 
-.modal-container{
+.modal-container {
     opacity: 0;
     display: flex;
     background-color: rgba(0, 0, 0, .3);
@@ -690,15 +690,15 @@ footer span {
     height: 100%;
     top: 0;
     left: 0;
-    
+
 }
 
-.show{
+.show {
     pointer-events: auto;
     opacity: 1;
 }
 
-.modal{
+.modal {
     background-color: #fff;
     width: 600px;
     max-width: 100%;
@@ -708,12 +708,12 @@ footer span {
     text-align: center;
 }
 
-.modal h1{
+.modal h1 {
     margin: 0;
     font-size: 22px;
 }
 
-.modal p{
+.modal p {
     opacity: 0.7;
     font-size: 16px;
 }
