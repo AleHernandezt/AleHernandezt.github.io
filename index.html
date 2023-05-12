@@ -367,8 +367,21 @@
                     <input type="tel" placeholder="number" class="box" required name="number">
 
                     <textarea name="msg" id="message" cols="30" rows="10" placeholder="Hi! "></textarea>
+                    
 
-                    <input type="submit" class="btn" value="send message" name="enviar" href="#">
+                    <input type="button" value="send message" id="open" class="btn">
+                    
+
+                    <div class="modal-container" id="modal-container">
+                        <div class="modal">
+                            <h1>Message Send</h1>
+                            <p>
+                                Thank you for contacting me. Your information has been successfully submitted and I will get in touch with you as soon as possible                            </p>
+
+                            <input type="button" value="send message" id="close" class="btn">
+                            
+                        </div>
+                    </div>
 
                 </form>
 
