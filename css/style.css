@@ -341,7 +341,7 @@ header .follow a:hover {
 }
 
 .about .row-2 .skills .progress:nth-child(4) .bar span {
-    width: 99%;
+    width: 100%;
 }
 
 .about .row-2 .box-container {
