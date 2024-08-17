@@ -4,6 +4,11 @@
     --main-color: #1e5bd6;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
 body::-webkit-scrollbar {
     width: 10px;
 }
@@ -329,15 +334,15 @@ header .follow a:hover {
 }
 
 .about .row-2 .skills .progress:nth-child(1) .bar span {
-    width: 85%;
+    width: 90%;
 }
 
 .about .row-2 .skills .progress:nth-child(2) .bar span {
-    width: 80%;
+    width: 85%;
 }
 
 .about .row-2 .skills .progress:nth-child(3) .bar span {
-    width: 70%;
+    width: 100%;
 }
 
 .about .row-2 .skills .progress:nth-child(4) .bar span {
