@@ -717,3 +717,7 @@ footer span {
     opacity: 0.7;
     font-size: 16px;
 }
+
+.img-sidebar{
+    width: 100px;
+}
