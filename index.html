@@ -1,431 +1,538 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ale's Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>José Alejandro Hernández | Founder & Product Lead</title>
+    <meta name="description" content="Executive portfolio of José Alejandro Hernández, specializing in digital product strategy, enterprise operations, and scalable software architecture.">
+    <meta name="keywords" content="José Alejandro Hernández, Founder, Product Lead, Tripealo, Travel-Tech, Business Operations, Product Strategy">
+    <meta name="author" content="José Alejandro Hernández">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="José Alejandro Hernández — Founder, Product Lead & Business Operations">
+    <meta property="og:description" content="Transforming complex business logic into scalable, frictionless digital products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alehernandezt.github.io">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!--        icono           -->
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="img/reelicon.ico">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            primary: '#0a0a0f',
+                            secondary: '#12121a',
+                            accent: '#1e5bd6',
+                            'accent-hover': '#1946a3',
+                            muted: '#8a8a9a',
+                            light: '#f0f0f5',
+                        }
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    },
+                    keyframes: {
+                        'slide-up': {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        'slide-in-left': {
+                            '0%': { transform: 'translateX(-30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        'slide-in-right': {
+                            '0%': { transform: 'translateX(30px)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                        'scale-in': {
+                            '0%': { transform: 'scale(0.9)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
+                        'blur-in': {
+                            '0%': { filter: 'blur(8px)', opacity: '0' },
+                            '100%': { filter: 'blur(0)', opacity: '1' },
+                        },
+                        'counter-pulse': {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                        },
+                    },
+                    animation: {
+                        'slide-up': 'slide-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'slide-in-left': 'slide-in-left 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'slide-in-right': 'slide-in-right 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'scale-in': 'scale-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'blur-in': 'blur-in 0.8s ease-out forwards',
+                        'counter-pulse': 'counter-pulse 2s ease-in-out infinite',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #f0f0f5;
+            font-feature-settings: 'rlig' 1, 'calt' 1;
+        }
+
+        .glass {
+            background: rgba(18, 18, 26, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #f0f0f5 0%, #8a8a9a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e5bd6, #4a8bff);
+            z-index: 9999;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.1s linear;
+            pointer-events: none;
+        }
+
+        /* Scroll-triggered animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-up {
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .scale-up.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .blur-reveal {
+            opacity: 0;
+            filter: blur(8px);
+            transition: opacity 0.8s ease-out, filter 0.8s ease-out;
+        }
+
+        .blur-reveal.visible {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        /* Stagger delays for children */
+        .stagger-children > .fade-in:nth-child(1) { transition-delay: 0s; }
+        .stagger-children > .fade-in:nth-child(2) { transition-delay: 0.1s; }
+        .stagger-children > .fade-in:nth-child(3) { transition-delay: 0.2s; }
+        .stagger-children > .fade-in:nth-child(4) { transition-delay: 0.3s; }
+        .stagger-children > .fade-in:nth-child(5) { transition-delay: 0.4s; }
+        .stagger-children > .fade-in:nth-child(6) { transition-delay: 0.5s; }
+
+        /* Card hover glow */
+        .card-hover-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        .card-hover-glow::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(30, 91, 214, 0.08) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .card-hover-glow:hover::before {
+            opacity: 1;
+        }
+
+        /* Language toggle */
+        .lang-toggle {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 4px;
+        }
+        .lang-btn {
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .lang-btn.active {
+            background: rgba(30, 91, 214, 0.2);
+            color: #1e5bd6;
+        }
+        .lang-btn:hover:not(.active) {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0f; }
+        ::-webkit-scrollbar-thumb { background: #12121a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1e5bd6; }
+
+        /* Section divider line animation */
+        .section-divider {
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(30, 91, 214, 0.3), transparent);
+            transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            margin: 0 auto;
+        }
+        .section-divider.visible {
+            width: 100%;
+        }
+    </style>
 </head>
 
-<body>
-    <!--Cursor-->
-    <div class="cursor1"></div>
-    <div class="cursor2"></div>
-    <i class="uil uil-bars"></i>
+<body class="antialiased selection:bg-dark-accent selection:text-white">
 
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
 
-    <header>
-        <a href="#" class="logo"><img class="img-sidebar" src="./img/Ale.png" alt="Name"></a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#experiences">Studies</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="follow">
-            <a href="https://facebook.com/" target="_blank" aria-label="facebook" rel="noopener"><i
-                    class="uil uil-facebook"></i></a>
-            <a href="https://instagram.com/ale.hzt" target="_blank" aria-label="Instagram" rel="noopener"><i
-                    class="uil uil-instagram"></i></a>
-            <a href="https://twitter.com/" target="_blank" aria-label="twitter" rel="noopener"><i
-                    class="uil uil-twitter-alt"></i></a>
-            <a href="https://www.linkedin.com/in/alehernandezt/" target="_blank" aria-label="linkedin" rel="noopener"><i
-                    class="uil uil-linkedin"></i></a>
-        </div>
-    </header>
-    <!--                    Home                         -->
-    <section class="home" id="home">
-        <div class="content">
-            <div class="span hi"> Hi There</div>
-            <h3> I'm <span>Ale Hernandez</span></h3>
-            <p class="info">I'm a Software Developer</p>
-            <p class="text">
-                In training to be Aviable to solve your problem on web
-            </p>
-            <a href="https://linktr.ee/alehernandezt" class="btn" target="_blank">Contact</a>
-        </div>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
 
-        <div class="image">
-            <img src="img/profile.jpg" alt="">
-        </div>
-    </section>
-    <!--                     About                      -->
-    <section class="about" id="about">
+    <main>
+        <!-- Sections -->
+        <div id="hero-placeholder"></div>
+        <div id="venture-placeholder"></div>
+        <div id="enterprise-placeholder"></div>
+        <div id="philosophy-placeholder"></div>
+        <div id="contact-placeholder"></div>
+    </main>
 
-        <h1 class="heading"> About <span>me</span></h1>
-        <div class="row-1">
-            <div class="image">
-                <img src="img/AleHernande.png" alt="">
-            </div>
-            <div class="content">
-                <h3>My Name is Ale Hernandez and I'm a Software developer</h3>
-                <p>FrontEnd & BackEnd Developer</p>
-                <div class="box-container">
-                    <div class="box">
-                        <p><span>Age : </span> 22 </p>
-                        <p><span>Gender : </span> Male </p>
-                        <p><span>Languaje : </span> English, Spanish </p>
-                        <p><span>Work : </span> Software Developer </p>
-                    </div>
-                    <div class="box">
-                        <p><span>Freelance : </span> Aviable </p>
-                        <p><span>Phone : </span><a href="https://linktr.ee/alehernandezt"
-                                target="_blank">+584245665055</a></p>
-                        <p><span>Email : </span><a href="https://linktr.ee/alehernandezt">alehztdev@gmail.com
-                        </a>
-                        </p>
-                        <p><span>Country : </span> Venezuela </p>
-                    </div>
-                </div>
-                <!-- <a href="#" class="btn">Download CV</a> -->
-                <a href="https://www.canva.com/design/DAGOcGwpNQw/eC5ihF1iFwk0vc6J5NyUEQ/view?utm_content=DAGOcGwpNQw&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-                    class="btn" target="_blank">English Cv</a>
-                <a href="https://www.canva.com/design/DAGAnxAIHcI/S_A1g851TduyU0DoiYJY3g/view?utm_content=DAGAnxAIHcI&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-                    class="btn" target="_blank">Spanish Cv</a>
-            </div>
-        </div>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
 
-        <h1 class="heading"><span>My </span>Skills</h1>
+    <!-- i18n Translation System -->
+    <script>
+        const translations = {
+            en: {
+                // Navbar
+                'nav.venture': 'Core Venture',
+                'nav.enterprise': 'Enterprise',
+                'nav.philosophy': 'Philosophy',
+                'nav.connect': 'Connect',
 
-        <div class="row-2">
-            <div class="skills">
-                <div class="progress">
-                    <h3>Angular <span> 90% </span> </h3>
-                    <div class="bar"><span></span></div>
-                </div>
+                // Hero
+                'hero.badge': 'Available for Strategic Advisory',
+                'hero.title.1': 'José Alejandro',
+                'hero.title.2': 'Hernández',
+                'hero.role': 'Founder & CFO',
+                'hero.role.company': ' de Tripealo',
+                'hero.subtitle': 'Product Lead & Business Operations Architect. I transform complex business logic into scalable, frictionless digital ecosystems.',
+                'hero.cta.primary': 'Explore Core Venture',
+                'hero.cta.secondary': 'Direct Inquiry',
+                'hero.metric.1.value': '5+',
+                'hero.metric.1.label': 'Years Scaling Products',
+                'hero.metric.2.value': '100%',
+                'hero.metric.2.label': 'Focus on ROI & QA',
+                'hero.metric.3.value': 'B2B/C',
+                'hero.metric.3.label': 'Multi-Market Exp',
+                'hero.quote': '"Precision in operations, excellence in product."',
 
-                <div class="progress">
-                    <h3>JavaScript <span> 85% </span> </h3>
-                    <div class="bar"><span></span></div>
-                </div>
+                // Venture
+                'venture.title': 'Core Venture',
+                'venture.desc': 'Leading the technological and strategic direction of <a href="https://tripealo.app" target="_blank" rel="noopener noreferrer" class="text-dark-accent hover:underline">Tripealo</a>, an innovative travel-tech ecosystem designed to modernize tourism operations. Co-Founder, CFO, Product Strategy & Functional QA.',
+                'venture.card1.tag': 'B2C · Multi-channel',
+                'venture.card1.title': 'Tripealo Consumer App',
+                'venture.card1.desc': 'Multichannel B2C platform with web in production and native iOS/Android apps in functional validation and deployment phase. Curated travel experiences for the end consumer.',
+                'venture.card2.tag': 'B2B · SaaS',
+                'venture.card2.title': 'Tripealo Agency Portal',
+                'venture.card2.desc': 'Comprehensive SaaS solution for travel agencies and operators — enabling experience inventory management, booking traceability, and operational metrics in a single dashboard.',
+                'venture.card3.tag': 'Core Analytics',
+                'venture.card3.title': 'Tripealo Admin Engine',
+                'venture.card3.desc': 'Internal control panel and core analytics for strategic decision-making, financial validation, and payment flow optimization across the entire ecosystem.',
 
-                <div class="progress">
-                    <h3>Tailwind <span> 100% </span> </h3>
-                    <div class="bar"><span></span></div>
-                </div>
+                // Enterprise
+                'enterprise.title': 'Enterprise Operations',
+                'enterprise.desc': 'Leading project delivery and business logic architecture across mission-critical enterprise platforms at <span class="text-white font-medium">iTecnológica</span>.',
+                'enterprise.role.title': 'Project Manager & Business Logic Lead',
+                'enterprise.role.desc': 'Overseeing the full functional cycle — from requirements gathering and stakeholder alignment to operational stability assurance and deployment-ready validation.',
+                'enterprise.bsji.tag': 'Fintech / Banking',
+                'enterprise.bsji.title': 'BSJI — Banco San Juan Internacional',
+                'enterprise.bsji.desc': 'Supervision of secure transaction flows and functional requirements within regulated fintech/banking environments, ensuring compliance and operational integrity.',
+                'enterprise.midi.tag': 'Fintech · Creator Economy',
+                'enterprise.midi.title': 'Midi',
+                'enterprise.midi.desc': 'Fintech platform for LATAM\'s creator economy — enabling USD accounts, international Visa cards, and seamless global payments for creators and remote workers.',
+                'enterprise.higea.tag': 'Healthcare · ERP/HIS',
+                'enterprise.higea.title': 'Centro Diagnóstico HIGEA & Fundación HIGEA',
+                'enterprise.higea.desc': 'Healthcare ecosystem with ERP implementation, HIS (Hospital Information Systems), medical exam visualization (RX, CT), diagnostic reporting, and digital patient experiences.',
+                'enterprise.tools.tag': 'Operations',
+                'enterprise.tools.title': 'Internal Operations Tools',
+                'enterprise.tools.desc': 'Productivity dashboards and internal tooling designed to optimize operational processes, reduce bottlenecks, and improve team-wide execution velocity.',
 
-                <div class="progress">
-                    <h3>English <span> C-1 </span> </h3>
-                    <div class="bar"><span></span></div>
-                </div>
+                // Philosophy
+                'philosophy.title': 'Build Philosophy',
+                'philosophy.desc': 'Keep it simple. The best tool isn\'t the most complex one — it\'s the one your users actually adopt. Fewer steps, more conversions.',
+                'philosophy.p1.title': 'Keep It Simple',
+                'philosophy.p1.desc': 'The best tool isn\'t the most complex — it\'s the easiest to use. I design systems where users achieve their goals without friction, manuals, or second-guessing.',
+                'philosophy.p2.title': 'Fewer Steps, More Sales',
+                'philosophy.p2.desc': 'Every extra click is a lost conversion. I obsess over reducing friction because the shortest user journey is the one that drives revenue. Simplicity sells.',
+                'philosophy.p3.title': 'Business-First Architecture',
+                'philosophy.p3.desc': 'Every line of code must serve a business outcome. I translate complex operational logic into clear specifications where features map directly to revenue.',
 
-                <div class="progress">
-                    <h3>Linux <span> ZorinOs </span> </h3>
-                    <div class="bar"><span></span></div>
-                </div>
+                // Contact
+                'contact.title': 'Let\'s Build the Future',
+                'contact.desc': 'Open to strategic partnerships, investment opportunities, and high-impact enterprise ventures. Let\'s discuss how we can create value together.',
+                'contact.cta.linkedin': 'LinkedIn Profile',
 
-            </div>
+                // Footer
+                'footer.copy': '© 2025 José Alejandro Hernández. All rights reserved.',
+            },
+            es: {
+                // Navbar
+                'nav.venture': 'Venture Principal',
+                'nav.enterprise': 'Empresarial',
+                'nav.philosophy': 'Filosofía',
+                'nav.connect': 'Conectar',
 
-            <div class="box-container">
+                // Hero
+                'hero.badge': 'Disponible para Asesoría Estratégica',
+                'hero.title.1': 'José Alejandro',
+                'hero.title.2': 'Hernández',
+                'hero.role': 'Founder & CFO',
+                'hero.role.company': ' de Tripealo',
+                'hero.subtitle': 'Líder de Producto y Arquitecto de Operaciones de Negocio. Transformo lógica de negocio compleja en ecosistemas digitales escalables y sin fricción.',
+                'hero.cta.primary': 'Explorar Venture Principal',
+                'hero.cta.secondary': 'Contacto Directo',
+                'hero.metric.1.value': '5+',
+                'hero.metric.1.label': 'Años Escalando Productos',
+                'hero.metric.2.value': '100%',
+                'hero.metric.2.label': 'Enfoque en ROI y QA',
+                'hero.metric.3.value': 'B2B/C',
+                'hero.metric.3.label': 'Exp. Multi-Mercado',
+                'hero.quote': '"Precisión en operaciones, excelencia en producto."',
 
-                <div class="box">
-                    <h3> >> 2+ </h3>
-                    <p>Years Studiying</p>
-                </div>
+                // Venture
+                'venture.title': 'Venture Principal',
+                'venture.desc': 'Liderando la dirección tecnológica y estratégica de <a href="https://tripealo.app" target="_blank" rel="noopener noreferrer" class="text-dark-accent hover:underline">Tripealo</a>, un ecosistema innovador de travel-tech diseñado para modernizar las operaciones turísticas. Co-Fundador, CFO, Estrategia de Producto y QA Funcional.',
+                'venture.card1.tag': 'B2C · Multi-canal',
+                'venture.card1.title': 'Tripealo Consumer App',
+                'venture.card1.desc': 'Plataforma B2C multicanal con web en producción y apps nativas iOS/Android en fase de validación funcional y despliegue. Experiencias de viaje curadas para el consumidor final.',
+                'venture.card2.tag': 'B2B · SaaS',
+                'venture.card2.title': 'Tripealo Agency Portal',
+                'venture.card2.desc': 'Solución SaaS integral para agencias turísticas y operadores — gestión de inventario de experiencias, trazabilidad de reservas y métricas operativas en un solo panel.',
+                'venture.card3.tag': 'Analítica Core',
+                'venture.card3.title': 'Tripealo Admin Engine',
+                'venture.card3.desc': 'Panel de control interno y analítica core para la toma de decisiones estratégicas, validación financiera y optimización de flujos de pago en todo el ecosistema.',
 
-                <div class="box">
-                    <h3> >> 3+ </h3>
-                    <p>Certificates</p>
-                </div>
+                // Enterprise
+                'enterprise.title': 'Operaciones Empresariales',
+                'enterprise.desc': 'Liderando la entrega de proyectos y la arquitectura de lógica de negocio en plataformas empresariales de misión crítica en <span class="text-white font-medium">iTecnológica</span>.',
+                'enterprise.role.title': 'Project Manager y Líder de Lógica de Negocio',
+                'enterprise.role.desc': 'Supervisión del ciclo funcional completo — desde el levantamiento de requerimientos y alineación con stakeholders hasta la garantía de estabilidad operativa y validación pre-despliegue.',
+                'enterprise.bsji.tag': 'Fintech / Banca',
+                'enterprise.bsji.title': 'BSJI — Banco San Juan Internacional',
+                'enterprise.bsji.desc': 'Supervisión de flujos de transacciones seguras y requerimientos funcionales en entornos fintech/bancarios regulados, asegurando cumplimiento e integridad operativa.',
+                'enterprise.midi.tag': 'Fintech · Creator Economy',
+                'enterprise.midi.title': 'Midi',
+                'enterprise.midi.desc': 'Plataforma fintech para la creator economy de LATAM — habilitando cuentas en USD, tarjetas Visa internacionales y pagos globales sin fricción para creadores y trabajadores remotos.',
+                'enterprise.higea.tag': 'Salud · ERP/HIS',
+                'enterprise.higea.title': 'Centro Diagnóstico HIGEA y Fundación HIGEA',
+                'enterprise.higea.desc': 'Ecosistema de salud con implementación de ERP, HIS (Sistemas de Información Hospitalaria), visualización de exámenes médicos (RX, TC), reportería diagnóstica y experiencias digitales para pacientes.',
+                'enterprise.tools.tag': 'Operaciones',
+                'enterprise.tools.title': 'Herramientas de Operaciones Internas',
+                'enterprise.tools.desc': 'Dashboards de productividad y herramientas internas diseñadas para optimizar procesos operativos, reducir cuellos de botella y mejorar la velocidad de ejecución del equipo.',
 
-                <div class="box">
-                    <h3> >> 5+ </h3>
-                    <p>Projects complete</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--                Services                 -->
-    <section class="service" id="services">
-        <h1 class="heading"><span>My</span> Services</h1>
-        <div class="box-container">
+                // Philosophy
+                'philosophy.title': 'Filosofía de Construcción',
+                'philosophy.desc': 'Keep it simple. La mejor herramienta no es la más compleja — es la que tus usuarios realmente adoptan. Menos pasos, más conversiones.',
+                'philosophy.p1.title': 'Keep It Simple',
+                'philosophy.p1.desc': 'La mejor herramienta no es la más compleja — es la más fácil de usar. Diseño sistemas donde los usuarios logran sus objetivos sin fricción, manuales ni dudas.',
+                'philosophy.p2.title': 'Menos Pasos, Más Ventas',
+                'philosophy.p2.desc': 'Cada clic extra es una conversión perdida. Me obsesiono con reducir la fricción porque el recorrido más corto del usuario es el que genera ingresos. La simplicidad vende.',
+                'philosophy.p3.title': 'Arquitectura Business-First',
+                'philosophy.p3.desc': 'Cada línea de código debe servir a un resultado de negocio. Traduzco lógica operativa compleja en especificaciones claras donde cada feature mapea directamente a ingresos.',
 
-            <div class="box">
-                <i class="uil uil-java-script"></i>
-                <h3>Angular</h3>
-                <p>
-                    Web & responsive Angular 18 apps using Angular Material and Learning primeNg.
-                </p>
-            </div>
+                // Contact
+                'contact.title': 'Construyamos el Futuro',
+                'contact.desc': 'Abierto a alianzas estratégicas, oportunidades de inversión y ventures empresariales de alto impacto. Conversemos sobre cómo crear valor juntos.',
+                'contact.cta.linkedin': 'Perfil de LinkedIn',
 
-            <div class="box">
-                <i class="uil uil-css3-simple"></i>
-                <h3>Tailwind</h3>
-                <p>
-                    Responsive & DarkMode Design apllied in react and angular.
-                </p>
-            </div>
+                // Footer
+                'footer.copy': '© 2025 José Alejandro Hernández. Todos los derechos reservados.',
+            }
+        };
 
-            <div class="box">
-                <i class="uil uil-java-script"></i>
-                <h3>React</h3>
-                <p>
-                    Optimizing personal Project using React.
-                </p>
-            </div>
+        let currentLang = localStorage.getItem('lang') || 'en';
 
-            <div class="box">
-                <i class="uil uil-brackets-curly"></i>
-                <h3>Astro</h3>
-                <p>
-                    Landing pages & Personal Projects
-                </p>
-            </div>
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
 
-            <div class="box">
-                <i class="uil uil-brackets-curly"></i>
-                <h3>Python</h3>
-                <p>
-                    Scripts to automate simple tasks
-                </p>
-            </div>
-        </div>
-    </section>
-    <!--                Section                 -->
-    <section class="experience" id="experiences">
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translations[lang][key];
+                    } else {
+                        el.innerHTML = translations[lang][key];
+                    }
+                }
+            });
 
-        <h1 class="heading"><span>My </span>Studies</h1>
+            // Update language toggle buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+    </script>
 
-        <div class="box-container">
+    <!-- Component Loader -->
+    <script>
+        async function loadComponent(id, file) {
+            const element = document.getElementById(id);
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error(`Could not load ${file}`);
+                const html = await response.text();
+                element.innerHTML = html;
 
-            <div class="box">
-                <div class="content">
-                    <span>2017 - 2019</span>
-                    <h3>English Bilingual</h3>
-                    <p>
-                        Certified in 2018 by Carabobo Univerity (FUNDAUC), I've been speaking English since 2006.
-                    </p>
-                </div>
-            </div>
+                // Execute inline scripts from loaded components
+                const scripts = element.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    if (oldScript.src) {
+                        newScript.src = oldScript.src;
+                    } else {
+                        newScript.textContent = oldScript.textContent;
+                    }
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
 
-            <div class="box">
-                <div class="content">
-                    <span>2022 - 2025</span>
-                    <h3>College Graduate</h3>
-                    <p>
-                        I'm a college graduate from IUJO College with a degree in Informatics.
-                    </p>
-                </div>
-            </div>
+        // Initialize Landing Page
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadComponent('nav-placeholder', 'components/navbar.html');
+            await loadComponent('hero-placeholder', 'sections/hero.html');
+            await loadComponent('venture-placeholder', 'sections/venture.html');
+            await loadComponent('enterprise-placeholder', 'sections/enterprise.html');
+            await loadComponent('philosophy-placeholder', 'sections/philosophy.html');
+            await loadComponent('contact-placeholder', 'sections/contact.html');
+            await loadComponent('footer-placeholder', 'components/footer.html');
 
-            <div class="box">
-                <div class="content">
-                    <span>2022</span>
-                    <h3>University</h3>
-                    <p>
-                        I'm studiying Telematic engineering in UCLA university.
-                    </p>
-                </div>
-            </div>
+            // Apply saved language
+            setLanguage(currentLang);
 
-            <div class="box">
-                <div class="content">
-                    <span>2021</span>
-                    <h3>FrontEnd</h3>
-                    <p>
-                        In CadiF1 started my programming road in a bootcamp about logic, oriented objects programming,
-                        HTML, CSS & JS.
-                    </p>
-                </div>
-            </div>
+            // Initialize all animations
+            initAnimations();
+            initScrollProgress();
+        });
 
-            <!-- <div class="box">
-                <div class="content">
-                    <span>2022</span>
-                    <h3>C#</h3>
-                    <p>
-                        In my 2nd semester I learned C# with WinFroms, data structures, how CRUDs works and .txt and
-                        binary files.
-                    </p>
-                </div>
-            </div> -->
+        // ── Scroll Progress Bar ──
+        function initScrollProgress() {
+            const progressBar = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+                progressBar.style.transform = `scaleX(${progress})`;
+            }, { passive: true });
+        }
 
-            <div class="box">
-                <div class="content">
-                    <span>2022</span>
-                    <h3>Frameworks</h3>
-                    <p>
-                        As a self-taught developer, I've honed my skills with various productivity-enhancing frameworks,
-                        such as: Angular with primeNg & Angular Material, TailwindCss, React and Astro.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--                Portfolio                   -->
-    <section class="portfolio" id="portfolio">
-        <h1 class="heading"><span>My </span> Portfolio </h1>
+        // ── Scroll-Triggered Animations ──
+        function initAnimations() {
+            const animatedSelectors = '.fade-in, .fade-in-left, .fade-in-right, .scale-up, .blur-reveal, .section-divider';
 
-        <div class="box-container">
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -40px 0px'
+            });
 
-            <div class="box">
-                <img src="img/Angular.webp" alt="">
-                <h3>Santa Gema</h3>
-                <div class="icons">
-                    <a href="https://github.com/AleHernandezt/SantaGema-Frontend" target="_blank" aria-label="Project"
-                        rel="noopener">
-                        <i class="uil uil-link"></i>
-                        <i class="uil uil-corner-up-right-alt"></i>
-                        <i class="uil uil-search"></i>
-                    </a>
-                </div>
-            </div>
+            document.querySelectorAll(animatedSelectors).forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
 
-            <div class="box">
-                <img src="img/Angular.webp" alt="">
-                <h3>Hackathon winner</h3>
-                <div class="icons">
-                    <a href="https://github.com/AleHernandezt/hack17" target="_blank" aria-label="Project"
-                        rel="noopener">
-                        <i class="uil uil-link"></i>
-                        <i class="uil uil-corner-up-right-alt"></i>
-                        <i class="uil uil-search"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/astro.webp" alt="">
-                <h3>Mobra Landing page</h3>
-                <div class="icons">
-                    <a href="https://github.com/AleHernandezt/mobra" target="_blank" aria-label="Project"
-                        rel="noopener">
-                        <i class="uil uil-link"></i>
-                        <i class="uil uil-corner-up-right-alt"></i>
-                        <i class="uil uil-search"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/Tailwind.png" alt="">
-                <h3>Veintiunodev Project</h3>
-                <div class="icons">
-                    <a href="https://veintiunodev.com/" target="_blank" aria-label="Project" rel="noopener">
-                        <i class="uil uil-link"></i>
-                        <i class="uil uil-corner-up-right-alt"></i>
-                        <i class="uil uil-search"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/ts.png" alt="">
-                <h3>MyCommerce Project</h3>
-                <div class="icons">
-                    <a href="https://github.com/AndresBlade/my-commerce" target="_blank" aria-label="Project"
-                        rel="noopener">
-                        <i class="uil uil-link"></i>
-                        <i class="uil uil-corner-up-right-alt"></i>
-                        <i class="uil uil-search"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="box">
-                <img src="img/javascript.webp" alt="">
-                <h3>JavaScript</h3>
-                <div class="icons">
-                    <a href="https://github.com/AleHernandezt/rickMortyApi" target="_blank" aria-label="Project"
-                        rel="noopener">
-                        <i class="uil uil-link"></i>
-                        <i class="uil uil-corner-up-right-alt"></i>
-                        <i class="uil uil-search"></i>
-                    </a>
-                </div>
-            </div>
-
-
-
-            <!-- <div class="box">
-                <img src="img/python.jpeg" alt="">
-                <h3>Python</h3>
-                <div class="icons">
-                    <a href="https://github.com/AleHernandezt/compressor" target="_blank"
-                        aria-label="Project" rel="noopener">
-                        <i class="uil uil-link"></i>
-                        <i class="uil uil-corner-up-right-alt"></i>
-                        <i class="uil uil-search"></i>
-                    </a>
-                </div>
-            </div> -->
-
-        </div>
-    </section>
-    <!--            Contact section              -->
-    <section class="contact" id="contact">
-
-        <h1 class="heading">Contact <span>Me</span> </h1>
-
-        <div class="icons-container">
-            <a href="https://linktr.ee/alehernandezt" class="icons">
-                <div class="icons">
-                    <i class="uil uil-envelope"></i>
-                    <h3>My Linktree</h3>
-                    <p>Linktree</p>
-                </div>
-            </a>
-
-            <a href="mailto:alehztdev@gmail.com
-            " class="icons">
-                <div class="icons">
-                    <i class="uil uil-envelope"></i>
-                    <h3>My Email</h3>
-                    <p>alehztdev@gmail.com
-                    </p>
-                </div>
-            </a>
-
-            <a href="tel: +584245665055" class="icons">
-                <div class="icons">
-                    <i class="uil uil-envelope"></i>
-                    <h3>My Phone</h3>
-                    <p>+584245665055</p>
-                </div>
-            </a>
-
-            <div class="row">
-                <form name="contactForm" method="post">
-                    <input type="text" placeholder="Name" class="box" required name="name">
-                    <input type="email" placeholder="email" class="box" name="email" required>
-                    <input type="number" placeholder="number" class="box" required name="number">
-
-                    <textarea name="msg" id="message" cols="30" rows="10" placeholder="Hi! "></textarea>
-
-
-                    <input type="button" value="send message" id="open" class="btn">
-
-
-                    <div class="modal-container" id="modal-container">
-                        <div class="modal">
-                            <h1>Message Send</h1>
-                            <p>
-                                Thank you for contacting me. Your information has been successfully submitted and I will
-                                get in touch with you as soon as possible </p>
-
-                            <input type="button" value="send message" id="close" class="btn">
-
-                        </div>
-                    </div>
-
-                </form>
-
-                <iframe class="map" title="mapa"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15713.16472192651!2d-69.2756771!3d10.0752104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e875d00476b8717%3A0x61e919423a04e885!2sCasa%20Ale!5e0!3m2!1ses!2sve!4v1729210824000!5m2!1ses!2sve"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-    <!--            Footer           -->
-    <footer> created by <span>alehernandezt</span> |all rights reserved!|</footer>
-    <script src="js/script.js"></script>
 </body>
-
 </html>
