@@ -1,0 +1,85 @@
+{
+  "source": "https://www.tripealo.app/",
+  "updated": "2026-10-31T20:01Z",
+  "trips": [
+    {
+      "id": "98",
+      "title": "Cumaripa",
+      "destination": "Cumaripa",
+      "date": "2026-11-01",
+      "price": 48,
+      "agency": "Nómadas Tours",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/98/1788326949277-7hvkyu1wwxf.png",
+      "tags": [
+        "Extremo"
+      ],
+      "url": "https://www.tripealo.app/experiencias/98?destino=24&salida=273"
+    },
+    {
+      "id": "11",
+      "title": "Colonia Tovar",
+      "destination": "Colonia Tovar",
+      "date": "2026-11-01",
+      "price": 30,
+      "agency": "Guaros Trekking",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/11/1778284753173-9220vuzg5j.jpeg",
+      "tags": [
+        "Montaña",
+        "Paseo"
+      ],
+      "url": "https://www.tripealo.app/experiencias/11?destino=16&salida=250"
+    },
+    {
+      "id": "42",
+      "title": "Paraíso Playero en Cayo Sal",
+      "destination": "Cayo Sal",
+      "date": "2026-11-01",
+      "price": 24,
+      "agency": "Guaros Trekking",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/42/1790121369858-ox2j0r72n7j.png",
+      "tags": [
+        "Playa"
+      ],
+      "url": "https://www.tripealo.app/experiencias/42?destino=20&salida=252"
+    },
+    {
+      "id": "52",
+      "title": "Cayo Muerto",
+      "destination": "Cayo Muerto",
+      "date": "2026-11-01",
+      "price": 23,
+      "agency": "Guaros Trekking",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/52/1780551030156-jtbcxannv1p.jpeg",
+      "tags": [
+        "Playa"
+      ],
+      "url": "https://www.tripealo.app/experiencias/52?destino=8&salida=254"
+    },
+    {
+      "id": "91",
+      "title": "Cayo Sombrero",
+      "destination": "Cayo Sombrero",
+      "date": "2026-11-01",
+      "price": 30,
+      "agency": "Kunawaros Trips",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/91/1788229596086-43r1s7e9e1n.png",
+      "tags": [
+        "Playa"
+      ],
+      "url": "https://www.tripealo.app/experiencias/91?destino=35&salida=266"
+    },
+    {
+      "id": "93",
+      "title": "Cayo Sal",
+      "destination": "Cayo Sal",
+      "date": "2026-11-01",
+      "price": 24,
+      "agency": "Kunawaros Trips",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/93/1790716675370-n2cp1p53g6.png",
+      "tags": [
+        "Playa"
+      ],
+      "url": "https://www.tripealo.app/experiencias/93?destino=20&salida=265"
+    }
+  ]
+}
