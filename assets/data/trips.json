@@ -1,85 +1,73 @@
 {
   "source": "https://www.tripealo.app/",
-  "updated": "2026-10-31T20:01Z",
+  "updated": "2026-11-01T06:10Z",
   "trips": [
     {
-      "id": "98",
-      "title": "Cumaripa",
-      "destination": "Cumaripa",
-      "date": "2026-11-01",
-      "price": 48,
-      "agency": "Nómadas Tours",
-      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/98/1788326949277-7hvkyu1wwxf.png",
+      "id": "111",
+      "title": "Los cristales",
+      "destination": "Los cristales",
+      "date": "2026-11-02",
+      "price": 8,
+      "agency": "Guaros Trekking",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/111/1790718757649-ake3s6j4x8f.jpeg",
       "tags": [
-        "Extremo"
+        "Rio"
       ],
-      "url": "https://www.tripealo.app/experiencias/98?destino=24&salida=273"
+      "url": "https://www.tripealo.app/experiencias/111?destino=49&salida=256"
     },
     {
-      "id": "11",
-      "title": "Colonia Tovar",
-      "destination": "Colonia Tovar",
-      "date": "2026-11-01",
-      "price": 30,
-      "agency": "Guaros Trekking",
-      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/11/1778284753173-9220vuzg5j.jpeg",
+      "id": "30",
+      "title": "Lomas de Cubiro",
+      "destination": "Cubiro",
+      "date": "2026-11-07",
+      "price": 14,
+      "agency": "Nómadas Tours",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/30/1781104897125-ylf84bz14pl.webp",
       "tags": [
         "Montaña",
         "Paseo"
       ],
-      "url": "https://www.tripealo.app/experiencias/11?destino=16&salida=250"
+      "url": "https://www.tripealo.app/experiencias/30?destino=26&salida=275"
     },
     {
-      "id": "42",
-      "title": "Paraíso Playero en Cayo Sal",
-      "destination": "Cayo Sal",
-      "date": "2026-11-01",
-      "price": 24,
+      "id": "34",
+      "title": "Choroni",
+      "destination": "Choroni",
+      "date": "2026-11-07",
+      "price": 85,
       "agency": "Guaros Trekking",
-      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/42/1790121369858-ox2j0r72n7j.png",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/34/1790738548684-5tgvgc3ccqq.jpg",
       "tags": [
         "Playa"
       ],
-      "url": "https://www.tripealo.app/experiencias/42?destino=20&salida=252"
+      "url": "https://www.tripealo.app/experiencias/34?destino=10&salida=240"
     },
     {
-      "id": "52",
+      "id": "54",
+      "title": "Conoce Merida ¡En un día!",
+      "destination": "Merida",
+      "date": "2026-11-07",
+      "price": 30,
+      "agency": "Guaros Trekking",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/54/1780554064657-704go3sl6vn.jpeg",
+      "tags": [
+        "Cultura",
+        "Montaña"
+      ],
+      "url": "https://www.tripealo.app/experiencias/54?destino=21&salida=257"
+    },
+    {
+      "id": "94",
       "title": "Cayo Muerto",
       "destination": "Cayo Muerto",
-      "date": "2026-11-01",
+      "date": "2026-11-07",
       "price": 23,
-      "agency": "Guaros Trekking",
-      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/52/1780551030156-jtbcxannv1p.jpeg",
-      "tags": [
-        "Playa"
-      ],
-      "url": "https://www.tripealo.app/experiencias/52?destino=8&salida=254"
-    },
-    {
-      "id": "91",
-      "title": "Cayo Sombrero",
-      "destination": "Cayo Sombrero",
-      "date": "2026-11-01",
-      "price": 30,
       "agency": "Kunawaros Trips",
-      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/91/1788229596086-43r1s7e9e1n.png",
+      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/94/1790716854305-dfcs0ssv27r.png",
       "tags": [
         "Playa"
       ],
-      "url": "https://www.tripealo.app/experiencias/91?destino=35&salida=266"
-    },
-    {
-      "id": "93",
-      "title": "Cayo Sal",
-      "destination": "Cayo Sal",
-      "date": "2026-11-01",
-      "price": 24,
-      "agency": "Kunawaros Trips",
-      "image": "https://ndyvtyjalysiejsptxyn.supabase.co/storage/v1/object/public/experience_content/93/1790716675370-n2cp1p53g6.png",
-      "tags": [
-        "Playa"
-      ],
-      "url": "https://www.tripealo.app/experiencias/93?destino=20&salida=265"
+      "url": "https://www.tripealo.app/experiencias/94?destino=8&salida=267"
     }
   ]
 }
