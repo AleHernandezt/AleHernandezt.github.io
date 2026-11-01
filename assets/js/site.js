@@ -97,39 +97,6 @@
     }, 4200);
   });
 
-  // Próximas salidas publicadas en tripealo.app (assets/data/trips.json, actualizado por una GitHub Action)
-  const tripsBox = document.querySelector('[data-trips]');
-  if (tripsBox) {
-    const lang = tripsBox.dataset.lang || 'es';
-    const t = lang === 'en'
-      ? { by: 'with' }
-      : { by: 'con' };
-    const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-    const today = new Date().toLocaleDateString('en-CA');
-    fetch('/assets/data/trips.json', { cache: 'no-cache' })
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((data) => {
-        const trips = (data.trips || []).filter((trip) => trip.date >= today).slice(0, 3);
-        if (!trips.length) return;
-        tripsBox.innerHTML = trips.map((trip) => {
-          const place = trip.destination && trip.destination !== trip.title ? `${trip.destination} · ` : '';
-          return `<a class="trip" data-tilt="7" href="${esc(trip.url)}" target="_blank" rel="noopener">
-            <span class="trip-img">
-              <img src="${esc(trip.image)}" alt="${esc(trip.title)}" loading="lazy" decoding="async">
-            </span>
-            <span class="trip-body">
-              <b>${esc(trip.title)}</b>
-              <span>${esc(place)}${t.by} ${esc(trip.agency)}</span>
-              ${trip.tags && trip.tags.length ? `<span class="trip-tags">${trip.tags.map((tag) => `<i>${esc(tag)}</i>`).join('')}</span>` : ''}
-            </span>
-          </a>`;
-        }).join('');
-        tripsBox.classList.add('is-ready');
-        if (finePointer && !reduce) tripsBox.querySelectorAll('[data-tilt]').forEach((el) => tilt(el, 7));
-      })
-      .catch(() => {});
-  }
-
   // Puntos de la línea de tiempo
   const tlItems = document.querySelectorAll('.tl-item');
   const tlIo = new IntersectionObserver((entries) => {
