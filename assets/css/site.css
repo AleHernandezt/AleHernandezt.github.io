@@ -352,15 +352,6 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
 .pg-iujo img { width: 84px; height: 84px; }
 .pg-iujo b { font-size: 18px; }
 
-/* FAQ */
-.faq { display: grid; gap: 10px; }
-.faq details { border-radius: 22px; background: rgba(255, 255, 255, .45); border: 1px solid rgba(255, 255, 255, .85); overflow: hidden; }
-.faq summary { list-style: none; cursor: pointer; padding: 18px 54px 18px 20px; font-weight: 700; position: relative; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--margot); display: grid; place-items: center; font-weight: 600; transition: transform .3s var(--ease), background .3s; }
-.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); background: var(--red); }
-.faq details p { padding: 0 20px 20px; color: var(--ink-2); line-height: 1.65; }
-
 /* Contacto */
 .contact { position: relative; padding: 110px 0 28px; overflow: hidden; }
 .contact .photo img { object-position: 50% 40%; filter: saturate(.85); }
@@ -441,7 +432,6 @@ h1, h2, h3 { margin: 0; text-wrap: balance; }
   .tri-grid { grid-template-columns: 1.15fr .85fr; gap: 22px; }
   .tl-wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; }
   .tl-wrap > .head { position: sticky; top: 110px; align-self: start; }
-  .faq-wrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: 64px; }
 }
 
 @media (hover: none) {
