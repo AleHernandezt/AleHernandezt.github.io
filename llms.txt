@@ -1,32 +1,32 @@
 # Alejandro Hernández
 
-> Alejandro Hernández es un profesional de Barquisimeto, Lara (Venezuela), que trabaja entre las finanzas, la estrategia y el producto. Se formó en el IUJO y estudia en la UCLA, y hoy es cofundador y CFO de Tripealo (tripealo.app). / Alejandro Hernández, from Barquisimeto, Venezuela, works across finance, strategy and product; he is co-founder & CFO of Tripealo.
+> Alejandro Hernández (José Alejandro Hernández Torres) es Business Specialist en Barquisimeto, Venezuela: co-founder y CFO de Tripealo, co-founder y COO de Tridi, y Business Analyst en iTecnológica para fintech, banca y salud. / Business Specialist from Barquisimeto, Venezuela: Co-founder & CFO of Tripealo, Co-founder & COO of Tridi, and Business Analyst at iTecnológica (fintech, banking, healthcare).
 
 ## Perfil
-- Nombre: Alejandro Hernández (José Alejandro Hernández)
-- Cargo: Founder & CFO de Tripealo, desde octubre de 2025
+- Nombre: Alejandro Hernández (José Alejandro Hernández Torres)
+- Posicionamiento: Business Specialist. Construye el lado de negocio de productos tecnológicos: que el producto resuelva un problema real, que los números cierren y que llegue al mercado.
 - Ciudad: Barquisimeto, estado Lara, Venezuela
-- Responsabilidades: finanzas, estrategia, inversión, alianzas, operación y equipo, visión de producto (product owner)
-- Formación principal: IUJO (Instituto Universitario Jesús Obrero), TSU en Informática, 2022–2025
-- Trayectoria: 2024, lógica de negocio y requerimientos para Midi (fintech), Banco San Juan Internacional (banca) y Centro Diagnóstico HIGEA (salud: ERP, sistema GIS, historial médico); 2023, consultoría digital y sitios web para clientes empresariales
-- Formación: Ingeniería Telemática en la UCLA (Universidad Centroccidental Lisandro Alvarado), 2022–presente; TSU en Informática en el IUJO (Instituto Universitario Jesús Obrero), 2022–2025
-- Eventos: Platanus Hack 26 Caracas (octubre 2026); Startup Venezuela Summit 2026 en Caracas con el equipo de Tripealo
+- Idiomas: español (nativo), inglés (C1)
 
-## Tripealo
-- Sitio: https://tripealo.app
-- Qué es: marketplace de experiencias de viaje que centraliza traslados, rutas y planes turísticos de Venezuela en una sola app
-- Lema: "Más destinos, menos límites"
-- Sede: Barquisimeto, Lara, Venezuela
+## Experiencia
+- Co-founder & COO, Tridi (oct 2026 – hoy): startup de Physical AI nacida en Platanus Hack 26 Caracas (producto construido en 36 horas). Lidera conversaciones con clientes, modelo de negocio y exploración de mercado, de humanoides a robots industriales. Aplicó a Y Combinator (2026). Sitio: https://trytridi.com
+- Co-founder & CFO, Tripealo (oct 2025 – hoy): marketplace de experiencias de viaje en Venezuela. Flujo de caja, control financiero, unit economics, relación con clientes y agencias aliadas, operación. +233% usuarios registrados (120 → 400) y +286% seguidores en Instagram (700 → 2.700+) en los últimos 2 meses. Pitch en Startup Venezuela Summit, Barquisimeto Tech Meetup y El Panal. Sitio: https://tripealo.app
+- Business Analyst, iTecnológica (oct 2024 – hoy): lógica de negocio, requerimientos funcionales e incidencias para MIDI Technologies (fintech), Banco San Juan Internacional (banca), Centro Diagnóstico y Fundación HIGEA (salud: migración del ERP legado a Odoo con Binaural, actualización a Odoo 17, CRM del contact center, dashboards en Power BI) y Novo Salud (salud). Diagnóstico con SQL y AWS CloudWatch.
+- Associate Founder, Veintiuno Dev (abr 2024 – ago 2025): lideró un equipo de desarrollo web (marca, landing pages, SEO) para más de 10 negocios locales.
 
-## Qué hacer en Lara y Barquisimeto
-- Barquisimeto: atardeceres (Ciudad de los Crepúsculos), Catedral Metropolitana, Obelisco, Parque del Este, Bararida, procesión de la Divina Pastora cada 14 de enero
-- Lara: Cubiro y Sanare (montaña), Carora (viñedos, cocuy, dulces), Quíbor (artesanía), El Tocuyo (historia colonial), Parque Nacional Terepaima
+## Formación
+- TSU en Informática (Associate Degree in Computer Science), Instituto Universitario Jesús Obrero (IUJO), 2022–2025
+- Inglés C1, FundaUC, 2017–2019
+
+## Habilidades
+- Negocio: lógica de negocio, análisis de negocio, unit economics, flujo de caja, operaciones, expansión de mercado, negociación con aliados, requerimientos funcionales
+- Herramientas: IA agéntica (Claude Code), SQL, Power BI, AWS CloudWatch, Odoo ERP, CRM
 
 ## Contacto
-- Email: alejandro@tripealo.app
+- WhatsApp: +58 424 354 9124
 - LinkedIn: https://www.linkedin.com/in/alehernandezt/
 - Instagram: https://www.instagram.com/ale.hzt/
-- WhatsApp: +58 424 354 9124
+- Email: alejandro@tripealo.app
 
 ## Páginas
 - [Español](https://alehernandezt.github.io/)
